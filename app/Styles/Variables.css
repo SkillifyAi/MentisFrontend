@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #4a6fa5;
+  --primary-dark: #3a5a8a;
+  --secondary-color: #6bb39b;
+  --accent-color: #ff7e5f;
+  --light-color: #f8f9fa;
+  --dark-color: #2d3748;
+  --gray-color: #718096;
+  --light-gray: #e2e8f0;
+  --white: #ffffff;
+  --black: #000000;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Montserrat', var(--font-main);
+  --transition: all 0.3s ease;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --light-blue: #bacaf5;
+  --error-color: #ff3333;
+  --succes-color: green;
+  --padding: 1rem;
+}
+  
+/* Reset some basic elements for consistency across browsers */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Set a base font family and color */
+body {
+  overflow-x: hidden;
+width: 100vw;
+height: 100vh;
+font-family:  "Roboto",'Arial', sans-serif;
+font-size: 16px;
+color: #333;
+line-height: 1.5;
+background-color: var(--background-bg);
+}
+
+/* Basic structure */
+container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Typography for headings */
+h1, h2, h3, h4, h5, h6 {
+margin-bottom: 10px;
+color: #222;
+font-weight: bold;
+}
+
+
+
+/* Style links */
+/* a {
+text-decoration: none;
+color: #3498db;
+}
+
+a:hover {
+text-decoration: underline;
+} */
+
+/* Buttons */
+/* button {
+padding: 10px 20px;
+border: none;
+background-color: #3498db;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #2980b9;
+} */
+
+.error {
+  font-size: 0.9rem;
+  color: var(--error-color);
+  text-align: center;
+}
+.succes {
+  font-size: 0.9rem;
+  color: var(--succes-color);
+}
+/* Form elements */
+input, textarea, select {
+padding: 10px;
+border: 1px solid #ddd;
+font-size: 16px;
+border-radius: 4px;
+}
+
+input[type="submit"] {
+background-color: #3498db;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #2980b9;
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+background-color: #333;
+color: white;
+}

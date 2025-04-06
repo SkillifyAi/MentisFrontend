@@ -1,0 +1,289 @@
+/* Login.module.css */
+
+.login-page {
+  height: 100%;
+  background-image: url("../assets/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  
+}
+
+.loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.loginHeading {
+  font-weight: normal;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 90%;
+}
+
+.loginLabel {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+.loginInput {
+  background: rgba(255, 255, 255, 0.3);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary-color);
+  color: white;
+}
+
+.loginButton {
+  background-color: #A1E3F9;
+  border-radius: 20px;
+  height: 45px;
+  width: 180px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #3674B5;
+}
+
+.username  {
+  color: var(--text-color);
+}
+
+.registerLink {
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.google-sign-in {
+align-self: center;
+width: 100%;
+display: flex;
+justify-content: center;  
+}
+
+.or-section {
+color: white;
+}
+.google-sign-in button {
+
+padding: var(--padding);
+background-color: var(--primary-color); 
+width: 70%;
+display: flex;
+gap: 15px;
+align-items: center;
+justify-content: center;
+font-size: 1rem;
+font-weight: 700;
+border-radius: var(--radius-md);
+border: none;
+color: white;
+transition: all 0.2s ease;
+}
+.google-sign-in button:hover {
+cursor: pointer;
+filter: brightness(1.2);
+}
+.google-sign-in img {
+height: 25px;
+width: 25px;
+}
+
+@media (min-width: 600px) {
+  .loginContainer {
+      width: 70%;
+  }
+  
+  .loginHeading {
+      font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .loginContainer {
+      width: 60%;
+      height: 60%;
+  }
+  
+  .loginForm {
+      padding: 40px;
+  }
+}
+
+
+/* Input and Button adjustments for mobile */
+@media (max-width: 480px) {
+  .loginInput {
+    height: 35px;
+    padding: 0px 15px;
+  }
+  
+  Button {
+    width: 90% !important;
+    font-size: 16px !important;
+  }
+  
+  .loginLabel {
+    font-size: 0.9rem;
+  }
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* background-color: #f5f5f5; */
+}
+
+.loginForm {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loginHeading {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.loginLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.loginInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background: white;
+  color: #333;
+}
+
+.loginInput:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.error {
+  color: #d32f2f;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.succes {
+  color: #2e7d32;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.or-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.or-section span {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.or-section p {
+  padding: 0 15px;
+  color: #777;
+  font-size: 14px;
+}
+
+.registerLink {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+/* @media (min-width: 992px) {
+  .loginContainer {
+      width: 40%;
+      height: 50%;
+      max-width: 800px;
+      max-height: 1000px;
+  }
+  
+  .loginHeading {
+      font-size: 2.5rem;
+  }
+  
+  .loginForm {
+      gap: 20px;
+  }
+} */
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+  .loginContainer {
+    background-color: var(--card-bg);
+  }
+  
+  .loginInput {
+    background: var(--primary-color);
+    color: var(--text-color);
+  }
+} */
