@@ -20,29 +20,6 @@ import "../app/Styles/style.css"
 import "../app/Styles/Unauthorized.css"
 import "../app/Styles/Variables.css"
 
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDO7rv2qxfpe4YzIFlVx_a6e-KXPVcRNX4",
-  authDomain: "mentis-123.firebaseapp.com",
-  projectId: "mentis-123",
-  storageBucket: "mentis-123.firebasestorage.app",
-  messagingSenderId: "379618210282",
-  appId: "1:379618210282:web:483b35a80a2942f7864293",
-  measurementId: "G-6TEB0BYF6R"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
