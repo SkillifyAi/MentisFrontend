@@ -112,7 +112,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="mentis-app" css={css`opacity: ${isVisible ? 1 : 0}; transition: opacity 0.8s ease;`}>
+    <div className="mentis-app">
       {/* Header with animation */}
       {/* <AnimatedSection as="header" className="main-header" delay="0.2s">
         <div className="container">
@@ -156,35 +156,14 @@ const Main = () => {
       </AnimatedSection> */}
       <ResponsiveHeader logged={logged}/>
       {/* Hero Section with animations */}
-      <section className="hero" id="home" css={css`
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(135deg, rgba(74,111,165,0.8) 0%, rgba(255,126,95,0.6) 100%);
-          z-index: 1;
-          animation: ${gradientBG} 12s ease infinite;
-          background-size: 200% 200%;
-        }
-      `}>
+      <section className="hero" id="home">
         <div className="container">
           <SlideUpDiv className="hero-content" delay="0.5s">
-            <h1 css={css`animation: ${fadeIn} 1s ease-out forwards;`}>Your Journey to Mental Wellness Starts Here</h1>
-            <p className="subtitle" css={css`
-              animation: ${fadeIn} 1s ease-out forwards;
-              animation-delay: 0.7s;
-              opacity: 0;
-            `}>
+            <h1>Your Journey to Mental Wellness Starts Here</h1>
+            <p className="subtitle">
               Professional support tailored to your unique needs
             </p>
-            <div className="cta-buttons" css={css`
-              animation: ${fadeIn} 1s ease-out forwards;
-              animation-delay: 0.9s;
-              opacity: 0;
-            `}>
+            <div className="cta-buttons">
               <a href="#services" className="btn btn-primary">Our Services</a>
               <Link to={logged ? "/dashboard" : "/sign-up"} className="btn btn-secondary">Get Help</Link>
             </div>
@@ -194,9 +173,6 @@ const Main = () => {
           src={heroImage} 
           alt="Peaceful meditation" 
           className="hero-image" 
-          css={css`
-            animation: ${fadeIn} 1.5s ease-out, ${float} 6s ease-in-out infinite;
-          `}
         />
       </section>
 
@@ -213,7 +189,7 @@ const Main = () => {
               <p>We specialize in treating anxiety, depression, trauma, and relationship issues.</p>
               <ul className="feature-list">
                 {['Confidential & secure sessions', 'Licensed professionals', 'Personalized treatment plans', 'Flexible appointment times'].map((item, index) => (
-                  <li key={item} css={css`animation: ${fadeIn} 0.6s ease-out forwards; animation-delay: ${0.6 + index * 0.1}s; opacity: 0;`}>
+                  <li key={item}>
                     {item}
                   </li>
                 ))}
@@ -223,12 +199,7 @@ const Main = () => {
               <img 
                 src={therapyImage} 
                 alt="Therapy session" 
-                css={css`
-                  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-                  &:hover {
-                    transform: scale(1.03) rotate(1deg);
-                  }
-                `}
+        
               />
             </SlideUpDiv>
           </div>
@@ -258,7 +229,7 @@ const Main = () => {
                   opacity: 0;
                 `}
               >
-                <div className="service-icon" css={css`animation: ${pulse} 4s ease-in-out infinite;`}>
+                <div className="service-icon" >
                   {service.icon}
                 </div>
                 <h3>{service.title}</h3>
@@ -287,21 +258,12 @@ const Main = () => {
               <FloatingCard 
                 key={member.name}
                 className="team-member"
-                css={css`
-                  animation: ${slideUp} 0.6s ease-out forwards;
-                  animation-delay: ${0.7 + index * 0.1}s;
-                  opacity: 0;
-                `}
+    
               >
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  css={css`
-                    transition: transform 0.5s ease;
-                    &:hover {
-                      transform: scale(1.05);
-                    }
-                  `}
+          
                 />
                 <h3>{member.name}</h3>
                 <p className="specialty">{member.specialty}</p>
@@ -327,21 +289,14 @@ const Main = () => {
               <FloatingCard 
                 key={testimonial.name}
                 className="testimonial-card"
-                css={css`
-                  animation: ${slideUp} 0.6s ease-out forwards;
-                  animation-delay: ${0.8 + index * 0.1}s;
-                  opacity: 0;
-                `}
+               
               >
                 <div className="testimonial-content">
                   <img 
                     src={testimonial.img} 
                     alt={testimonial.name} 
                     className="client-photo" 
-                    css={css`
-                      animation: ${float} 6s ease-in-out infinite;
-                      animation-delay: ${index * 0.5}s;
-                    `}
+                   
                   />
                   <p>{testimonial.quote}</p>
                   <div className="client-info">
@@ -359,12 +314,11 @@ const Main = () => {
       <AnimatedSection className="cta-section" delay="0.7s">
         <div className="container">
           <SlideUpDiv className="cta-content" delay="0.8s">
-            <h2 css={css`animation: ${pulse} 6s ease-in-out infinite;`}>Ready to Begin Your Healing Journey?</h2>
+            <h2 >Ready to Begin Your Healing Journey?</h2>
             <p>Take the first step toward better mental health today.</p>
             <Link to={logged ? "/dashboard" : "/sign-up"} >
             <GradientButton 
               className="btn btn-primary"
-              css={css`animation: ${pulse} 4s ease-in-out infinite; animation-delay: 1s;`}  
             >
               Schedule your appointment
             </GradientButton>
@@ -387,14 +341,6 @@ const Main = () => {
                     key={icon} 
                     href="#" 
                     aria-label={['Facebook', 'Twitter', 'Instagram', 'LinkedIn'][index]}
-                    css={css`
-                      animation: ${fadeIn} 0.6s ease-out forwards;
-                      animation-delay: ${1.0 + index * 0.1}s;
-                      opacity: 0;
-                      &:hover {
-                        animation: ${pulse} 0.5s ease;
-                      }
-                    `}
                   >
                     {icon}
                   </a>
@@ -409,11 +355,7 @@ const Main = () => {
                   <li key={link}>
                     <a 
                       href={`#${link.toLowerCase()}`}
-                      css={css`
-                        animation: ${fadeIn} 0.6s ease-out forwards;
-                        animation-delay: ${1.1 + index * 0.1}s;
-                        opacity: 0;
-                      `}
+                   
                     >
                       {link}
                     </a>

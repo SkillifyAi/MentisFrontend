@@ -1,7 +1,6 @@
 /* Login.module.css */
 
 .login-page {
-  height: 100%;
   background-image: url("../assets/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,9 +103,10 @@ color: white;
 }
 .google-sign-in button {
 
+  height: 53.5px;
 padding: var(--padding);
 background-color: var(--primary-color); 
-width: 70%;
+width: 90%;
 display: flex;
 gap: 15px;
 align-items: center;
@@ -233,21 +233,38 @@ width: 25px;
 .or-section {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  text-align: center;
+  gap: 10px;
+  margin-block: 15px;
+  width: 90%;
 }
 
 .or-section span {
-  flex: 1;
   height: 1px;
-  background-color: #ddd;
+  background-color: #7f8c9c; /* or any color you want for the lines */
+  display: block;
+  opacity: .5;
+  width: 50%;
 }
 
 .or-section p {
-  padding: 0 15px;
-  color: #777;
-  font-size: 14px;
+  white-space: nowrap;
+  color: #7f8c9c; /* optional: style the text */
+  margin-bottom: 0;
 }
 
+.forgot-password {
+  width: 90%;
+  color: #666;
+  cursor: pointer;
+  font-size: .9rem;
+  transition: var(--transition);
+}
+
+.forgot-password:hover {
+  color: #222;
+  text-decoration: underline;
+}
 .registerLink {
   text-align: center;
   margin-top: 20px;
@@ -258,6 +275,7 @@ width: 25px;
 
 .registerLink:hover {
   text-decoration: underline;
+  color: #222;
 }
 /* @media (min-width: 992px) {
   .loginContainer {

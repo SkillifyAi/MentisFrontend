@@ -195,7 +195,7 @@
     color: var(--primary-color);
   }
   
-  .main-nav a:after {
+  .main-nav .link:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -206,7 +206,7 @@
     transition: var(--transition);
   }
   
-  .main-nav a:hover:after {
+  .main-nav .link:hover:after {
     width: 100%;
   }
   

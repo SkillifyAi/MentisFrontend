@@ -5,9 +5,6 @@ import BookSessionForm from './Mui/Form';
 
 const TherapistCard = ({ therapist, userData }) => {
 
-
-  console.log(therapist);
-  
   const [open, setOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 

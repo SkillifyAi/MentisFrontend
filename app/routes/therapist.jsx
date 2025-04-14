@@ -20,6 +20,7 @@ import {
 import { Psychology, Schedule, Email, Person, Phone, LocationOn, School, Work, Translate } from '@mui/icons-material';
 
 import { useLocation, useNavigate} from 'react-router';
+import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight';
 
 const TherapistRegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -207,6 +208,8 @@ const TherapistRegistrationPage = () => {
       setError('Something went wrong, please try again later.');
     }
   };
+
+  //useResponsiveBodyHeight()
 
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>

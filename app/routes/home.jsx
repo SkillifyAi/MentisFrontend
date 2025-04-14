@@ -1,3 +1,4 @@
+import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight';
 import Header from '../component/Header'
 import Main from '../component/Main';
 
@@ -8,7 +9,11 @@ export function meta() {
   ];
 }
 
+
+
 export default function Home() {
+
+  useResponsiveBodyHeight()
   return <>
      {/* <Header /> */}
      <Main />

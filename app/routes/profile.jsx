@@ -32,6 +32,7 @@ import {
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { useNavigate } from 'react-router';
 import { keyframes } from '@emotion/react';
+import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight';
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -127,6 +128,7 @@ const ProfilePage = () => {
     navigate('/');
   };
   
+  //useResponsiveBodyHeight()
 
   return (
     <Fade in={!loading} timeout={500}>
