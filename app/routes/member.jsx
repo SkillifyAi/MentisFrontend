@@ -7,6 +7,7 @@ import Donation from '../component/Mui/Donation';
 import SimpleDialog from '../component/Mui/Dialog';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight';
 
 const DashboardHeader = ({ profileData, category, handleChangeCategory }) => {
   const navigate = useNavigate();
@@ -430,6 +431,7 @@ const DashboardPage = () => {
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
   };
 
+  //useResponsiveBodyHeight()
 
   return (
     <>

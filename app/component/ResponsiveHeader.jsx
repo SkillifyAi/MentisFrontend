@@ -40,24 +40,15 @@ const ResponsiveHeader = ({ logged }) => {
       <List>
         {navItems.map((item) => (
           <ListItem 
-            button 
             key={item}
             component="a"
             href={`#${item.toLowerCase()}`}
             onClick={handleDrawerToggle}
-            css={css`
-              color: white;
-              margin-bottom: 0.5rem;
-              &:hover {
-                background: rgba(255,255,255,0.1);
-              }
-            `}
           >
             <ListItemText primary={item} />
           </ListItem>
         ))}
         <ListItem
-            button
             component={Link}
             to={logged ? "/dashboard" : "/sign-up"}
             onClick={handleDrawerToggle}
@@ -94,32 +85,9 @@ const ResponsiveHeader = ({ logged }) => {
   return (
     <>
       
-      <AnimatedSection as="header" className="main-header" delay="0.2s" css={css`
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1100;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem 0;
-      `}>
-        <div className="container" css={css`
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 2rem;
-        `}>
-          <Link to="/" className="logo" css={css`
-            animation: ${fadeIn} 0.8s ease-out, ${pulse} 3s ease-in-out infinite;
-            animation-delay: 0.3s;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);  // Make sure this variable is defined
-            text-decoration: none;
-          `}>
+      <AnimatedSection as="header" className="main-header" delay="0.2s" >
+        <div className="container">
+          <Link to="/" className="logo" >
             Mentis
           </Link>
 
@@ -129,9 +97,7 @@ const ResponsiveHeader = ({ logged }) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              css={css`
-                color: var(--primary-color);  // Make sure this variable is defined
-              `}
+  
             >
               <MenuIcon />
             </IconButton>
@@ -161,6 +127,7 @@ const ResponsiveHeader = ({ logged }) => {
                     >
                       <Box
                         component="a"
+                        className='link'
                         href={`#${item.toLowerCase()}`}
                         sx={{
                           textDecoration: 'none',
@@ -234,7 +201,7 @@ const ResponsiveHeader = ({ logged }) => {
       </nav>
 
       {/* Add padding to content to account for fixed header */}
-      <div css={css`padding-top: 80px;`} />
+      
     </>
   );
 };

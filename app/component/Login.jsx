@@ -102,7 +102,7 @@ export default function Login() {
             backgroundColor: 'var(--primary-color)',
             border: 'solid 1px var(--primary-color)',
             padding: '10px 20px',
-            width: "70%",
+            width: "90%",
             fontSize: '18px',
             borderRadius: '8px',
             '&:hover': {
@@ -115,7 +115,7 @@ export default function Login() {
         >
           Log In
         </Button>
-        
+        <span className="forgot-password">Forgot password?</span>
         {error && <p className='error'>{error}</p>}
         {succes && <p className = 'succes'>{succes}</p>}
         <div className='or-section'>
