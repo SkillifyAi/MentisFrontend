@@ -1,9 +1,9 @@
     import React, {useEffect, useState, useRef} from 'react';
     import {useGoogleLogin } from '@react-oauth/google';
-    import GoogleLogo from '../assets/GoogleLogo.png'
+    import GoogleLogo from '../../assets/GoogleLogo.png'
     import {useNavigate} from 'react-router'
 
-    export default function LoginGoogle ({handleClose}) {
+    export default function LoginGoogle ({  toggleLoading}) {
     
         const [user, setUser] = useState()
         const [error, setError] = useState()
@@ -11,10 +11,12 @@
 
         const navigate = useNavigate()
         useEffect(() => {
-        
+            
             const getData = async () => {
             if (user) {
                 try {
+
+                toggleLoading(true)
                 // Step 1: Get user info from Google
                 const googleRes = await fetch(
                     `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`
@@ -44,12 +46,13 @@
                 }
         
                 // Success: Redirect and close
+                
                 navigate('/dashboard');
         
                 } catch (err) {
                 console.error(err);
-                setError(err.message || "An error occurred during Google login");
-                }
+                setError("An error occurred during Google login please try again later");
+                } 
             }
             };
         
@@ -58,7 +61,7 @@
             hasMounted.current = true;
             }
         
-        }, [user, navigate, handleClose]);
+        }, [user, navigate]);
 
 
         const login = useGoogleLogin({

@@ -1,5 +1,5 @@
 import React from 'react'
-import SignUp from '../component/SignUp.jsx'
+import SignUp from '../component/Login/SignUp.jsx'
 import Image from '../assets/home.jpg'
 import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight.jsx'
 

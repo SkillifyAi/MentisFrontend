@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from '../component/Login'
+import Login from '../component/Login/Login'
 import Image from '../assets/home.jpg'
 import useResponsiveBodyHeight from '../component/Functions/ResponsiveBodyHeight'
 

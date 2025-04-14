@@ -321,7 +321,6 @@ const DashboardPage = () => {
 
   const [therapists, setTherapists] = useState()
   const [profileData, setProfileData] = useState(null);
-  const [error, setError] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(10);
